@@ -14,37 +14,45 @@ and open the template in the editor.
         <?php
         // put your code here
         ?>
-        <div class="container-fluid" style="background-color: #122b40; padding: 10px">
-            <h3 class='thumbnail' style='width: 158px;background: #0f0f0f; color: aliceblue;  margin: auto; padding: 1px;font-weight: bolder'>ReciStaurant</h3>
+        <div class="container-fluid" style="background-color: #122b40; padding: 1px">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-2">
+                <h3 class='thumbnail' style='width: 158px;background: #0f0f0f; color: aliceblue;   padding: 1px;font-weight: bolder'>ReciStaurant</h3>
+                    </div>
+                    <div class="col-lg-10">
+                        <h2 style="color: peachpuff;font-style: italic;font-weight: bolder; margin-top: 20px">Find Nearby Restaurants</h2>
+                    </div>
+                </div>
+            </div>
         </div>
-        <div class="container" style="background-color: aliceblue; padding: 10px" >
-      
-
+        <div class="container form-group" style="background-color: aliceblue; padding: 10px" >
             <form class="form-horizontal" role="form">
+                <div class="row">
+                    <div class="col-lg-3">
+                    </div>
 
-
-
-                <div class="radio form-group">
-                    
-                        <label class="radio-inline"><input id="curr" type= "radio" value = "a" name= "search_area" onclick="radiocheck()" >My Location</label>
+                    <div class="radio col-lg-3">
+                        <label class="radio-inline"><input id="curr" type= "radio" value = "a" name= "search_area" onclick="radiocheck()" >Nearby</label>
                         <label class="radio-inline"><input id="spec" type = "radio" value = "b" name="search_area" onclick="radiocheck()" checked>Other Location</label>
-                            
-                    
+                    </div>
+                    <div class="col-lg-3">
+                    </div>
+                </div>
+
+
+                <div class="col-lg-8">
+
+                    <label for="locationpara"></label>
+                    <input type="text" class="form-control" id="locationpara" value="" name="location" placeholder="type in a location">
+
 
                 </div>
-                <div class="col-lg-8 form-group">
-                    
-                        <label for="locationpara"></label>
-                        <input type="text" class="form-control" id="locationpara" value="" name="location" placeholder="start typing">
-                        <span class="help-block">Enter Location</span>
-                    
-                </div>
-                <div class="col-lg-4 form-group">
-                    
+                <div class="col-lg-4">
+                    <button type="button" class="btn btn-primary">Primary</button>
                 </div>
 
             </form>
-
         </div>
 
     </body>
