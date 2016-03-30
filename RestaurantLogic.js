@@ -59,15 +59,19 @@ function showError(error) {
 alert("m5");
     switch(error.code) {
         case error.PERMISSION_DENIED:
+            alert("m5a");
             x.innerHTML = "User denied the request for Geolocation."
             break;
         case error.POSITION_UNAVAILABLE:
+            alert("m5b");
             x.innerHTML = "Location information is unavailable."
             break;
         case error.TIMEOUT:
+            alert("m5c");
             x.innerHTML = "The request to get user location timed out."
             break;
         case error.UNKNOWN_ERROR:
+            alert("m5d");
             x.innerHTML = "An unknown error occurred."
             break;
     }
@@ -103,7 +107,7 @@ alert("m5");
  MAP1///////////////////////////////////////////////////////////////////////////////////////////////////////////////////
  */ 
 function trigger(key,min,max) {  
-alert("m7");
+//alert("m7");
   //var garthdee = new google.maps.LatLng(57.1509, -2.2307);
 
   map = new google.maps.Map(document.getElementById('googleMap'), {
@@ -137,7 +141,7 @@ alert("m7");
 }
 //
 function callback(results, status) {
-alert("m8");
+//alert("m8");
   if (status == google.maps.places.PlacesServiceStatus.OK) {
     for (var i = 0; i < results.length; i++) {      
 	  getResultDetails(results[i]);	  
@@ -146,7 +150,7 @@ alert("m8");
 }
 //
 function getResultDetails(result){
-alert("m9");
+//alert("m9");
 	var placeLoc = result.geometry.location; //lat lng coordinates
 	bounds.extend(placeLoc);
 	map.fitBounds(bounds);
@@ -160,7 +164,7 @@ alert("m9");
 	//a PlaceService method to Retrieves details about the Place identified by the given placeId
 	var name;
 	service.getDetails(request, function(place, status) {
-	alert("m10");
+	//alert("m10");
 		if (status == google.maps.places.PlacesServiceStatus.OK) {
 			var marker = new google.maps.Marker({
 			map: map,
@@ -201,8 +205,12 @@ alert("m10");
 	//alert("Coordinate: "+currentPosition);
     //
   });
+  alert("hello");
 //  
 }
  //google.maps.event.addDomListener(window, 'load', findLocation);
- google.maps.event.addDomListener(window, 'load', onloadCurrentLocation);
+
+        //google.maps.event.addDomListener(window, 'load', onloadCurrentLocation);
+        onloadCurrentLocation();
+alert("please");
  //alert("loading...");

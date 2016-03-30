@@ -8,6 +8,9 @@ and open the template in the editor.
     <head>
         <meta charset="UTF-8">
         <?php require("lib.php"); ?>
+        <script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?v=3.19&signed_in=true&libraries=places&key=AIzaSyA-cZjoGMuveCNlvGPgABUEV5pzH3EyGqw"></script>
+        <script type="text/javascript" src="ValidationLogic.js"></script>
+        <script type="text/javascript" src="RestaurantLogic.js"></script>
 
     </head>
     <body>
@@ -18,7 +21,7 @@ and open the template in the editor.
             <div class="container">
                 <div class="row">
                     <div class="col-lg-2">
-                <h3 class='thumbnail' style='width: 158px;background: #0f0f0f; color: aliceblue;   padding: 1px;font-weight: bolder'>ReciStaurant</h3>
+                        <h3 class='thumbnail' style='width: 158px;background: #0f0f0f; color: aliceblue;   padding: 1px;font-weight: bolder'>ReciStaurant</h3>
                     </div>
                     <div class="col-lg-10">
                         <h2 style="color: peachpuff;font-style: italic;font-weight: bolder; margin-top: 20px">Find Nearby Restaurants</h2>
@@ -40,20 +43,30 @@ and open the template in the editor.
                     </div>
                 </div>
 
+                <div class="row">
+                    <div class="col-lg-8">
 
-                <div class="col-lg-8">
+                        <label for="locationpara"></label>
+                        <input type="text" class="form-control" id="locationpara" value="" name="location" placeholder="type in a location">
+                        <span id='msg12;color:red'></span>
 
-                    <label for="locationpara"></label>
-                    <input type="text" class="form-control" id="locationpara" value="" name="location" placeholder="type in a location">
 
-
+                    </div>
+                    <div class="col-lg-4">
+                        <button type="button" class="btn btn-primary" name='submit' id='submit' onclick="search()" >Find</button>
+                    </div>
                 </div>
-                <div class="col-lg-4">
-                    <button type="button" class="btn btn-primary">Primary</button>
-                </div>
-
             </form>
+            <div class='row' style='margin-top:10px'>
+                <div class='col-lg-8'>
+                    <div id='googleMap' style='height: 500px'>
+                    </div>
+                </div>
+                <div class="col-lg-4" style='background-color: white'>
+                </div>
+            </div>
         </div>
+
 
     </body>
 </html>

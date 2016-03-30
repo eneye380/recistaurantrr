@@ -21,6 +21,13 @@ alert("v1");
 	}
 }
 
+function search(){
+    min = 0;
+    max = 0;
+    key = '';
+    trigger(key,min,max);
+    return false;
+}
 
 function getSearchParameter(form){	
 alert("v2");
