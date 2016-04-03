@@ -182,6 +182,7 @@ function getResultDetails(result) {
                 document.getElementById("hint").innerHTML = "enter review here";
                 showReview(plc_id);
                 showRating(plc_id);
+                    $('span.stars').stars();
             });
         }
     });

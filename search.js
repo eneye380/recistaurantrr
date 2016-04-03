@@ -5,6 +5,18 @@
  */
 
 counter = 0;
+$.fn.stars = function() {
+    return $(this).each(function() {
+        // Get the value
+        var val = parseFloat($(this).html());
+        // Make sure that the value is in 0 - 5 range, multiply to get width
+        var size = Math.max(0, (Math.min(5, val))) * 16;
+        // Create stars holder
+        var $span = $('<span />').width(size);
+        // Replace the numerical value with stars
+        $(this).html($span);
+    });
+};
 function clear() {
     onloadCurrentLocation();
     //loadInputAutocomplete();
@@ -12,7 +24,7 @@ function clear() {
     
     n = document.getElementsByName('location');
     n[0].value = '';
-    document.getElementById('restaurant_name').innerHTML = "I'm here";
+    document.getElementById('restaurant_name').innerHTML = "";
     document.getElementById("spec").checked = true;
     document.getElementById("locationpara").disabled = false;
     document.getElementById("break").checked = false;
@@ -169,11 +181,11 @@ function Search(price, meal, area, mySearch) {
 }
 
 function validateLocation(data) {
-    alert("v3");
+    //alert("v3");
     if (data === '') {
         return "please type and select a location";
     }
-    else if(/[^,. a-zA-Z0-9]/.test(data)){
+    else if(/[^,-. a-zA-Z0-9]/.test(data)){
      return " invalid characters";
      }
     else
@@ -181,3 +193,7 @@ function validateLocation(data) {
 }
 
 
+
+$(function() {
+    $('span.stars').stars();
+});
