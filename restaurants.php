@@ -90,28 +90,30 @@ and open the template in the editor.
                         </select>
                     </div>
                     <div class="col-lg-1">
-                        <button type="submit" class="btn btn-sm btn-primary" name='submit' id='submit'  style="position: relative; top: 19px; background-color: #122b40;border-color: #122b40">Find</button>
+                        <!--button type="submit" class="btn btn-sm btn-primary" name='submit' id='submit'  style="position: relative; top: 19px; background-color: #122b40;border-color: #122b40">Find</button-->
                     </div>
                 </div>
                 <div class='row' style='margin-top:3px'>
                     <div class='col-lg-1'>
                     </div>
-                    <div class='col-lg-5'>
+                    <div style="" class='col-lg-5'>
                         <label class="radio-inline"><input class="een" id='uns' type="radio" name='meal_type' value=" " checked="true">unspecified</label>
                         <label class="radio-inline"><input class="een" id='break' type="radio" name='meal_type' value="breakfast">breakfast</label>
                         <label class="radio-inline"><input id='lunc' type="radio" name='meal_type' value="lunch">lunch</label>
                         <label class="radio-inline"><input id='dinn' type="radio" name='meal_type' value="dinner">dinner</label>
                     </div>
                     <div class="col-lg-3">
+                        
                     </div>
                     <div class='col-lg-3'>
+                        <button type="submit" class="btn btn-sm btn-primary" name='submit' id='submit'  style="background-color: #122b40;border-color: #122b40">Find</button>
                     </div>
                 </div>
             </form>
 
-            <div class='row' style='margin-top:10px'>
+            <div class='row' style=''>
                 <div class='col-lg-8' style="">
-                    <div id='googleMap' style='height: 500px'>
+                    <div id='googleMap' style='height: 500px; margin-top: 10px'>
                     </div>
                 </div>
                 <div class="col-lg-4" style='background-color: white'>

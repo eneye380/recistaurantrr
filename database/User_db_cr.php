@@ -9,9 +9,14 @@ $conn = new mysqli($servername, $username, $password, $dbname);
 } 
 
 // sql to create table
- $sql = "ALTER TABLE comment_userview DROP PRIMARY KEY
+ $sql = "CREATE TABLE comment_adminview (
+	placeid VARCHAR(40),
+        name VARCHAR(255),
+	comment TEXT,
+	rating decimal(2,1),	
+	timestamp TIMESTAMP
 	
-";
+	)";
 
 if ($conn->query($sql) === TRUE) {
     echo "Table comment_userview created successfully";

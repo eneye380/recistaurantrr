@@ -93,8 +93,12 @@ function post(form) {
         console.log("placeid: " + form.placeid.value);
         console.log("name: " + form.name.value);
         console.log("rating: " + form.rating.value);
-        document.getElementById("hint").innerHTML = "please fill empty fields";
+        
+        document.getElementById("hint").innerHTML = "please fill in empty fields";
         //
+        if(form.placeid.value===""){
+            document.getElementById("hint").innerHTML = "please select a restaurant";
+        }
         return false;
         //
     } else {

@@ -1,6 +1,6 @@
 <?php
 
-require './db_connection_info.php';
+require 'db_connection_info.php';
 
 // Create connection
 $conn = new mysqli($servername, $username, $password, $dbname);
@@ -16,8 +16,8 @@ $sql = "CREATE TABLE comment_adminview (
 	comment TEXT,
 	rating decimal(2,1),	
 	restaurant_name VARCHAR(255),
-        timestamp TIMESTAMP,
-	PRIMARY KEY(email,placeid)
+        timestamp TIMESTAMP
+	
 	)";
 
 if ($conn->query($sql) === TRUE) {
