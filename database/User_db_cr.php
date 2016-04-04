@@ -9,7 +9,7 @@ $conn = new mysqli($servername, $username, $password, $dbname);
 } 
 
 // sql to create table
- $sql = "CREATE TABLE comment_adminview (
+ $sql = "CREATE TABLE comment_userview (
 	placeid VARCHAR(40),
         name VARCHAR(255),
 	comment TEXT,
