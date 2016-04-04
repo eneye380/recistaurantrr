@@ -1,8 +1,5 @@
 <?php
-$localhost = "localhost";
-$username = "root";
-$password = "";
-$db = "recistaurant_DB";
+require '../database/db_connection_info.php';
 // Create connection
 if($_SERVER['REQUEST_METHOD']=='GET'){
 	$placeid = $_GET['placeid'];
@@ -25,7 +22,7 @@ if ($result->num_rows > 0) {
         echo "<div class='thumbnail' style='background:mistyrose; margin-top:5px'><p style='color:milk'>Name:</p><p style='color:milk;margin-top:-5px'> " . $row["name"]. "</p><p style='color:grey;margin-top:-5px'> Comment</p><p style='color:black;margin-top:-5px'> " . $row["comment"]."<p style='color:yellow;margin-top:-5px'>".$row["timestamp"]. "</p></p></div> ";
     }
 } else {
-    echo "No reviews";
+    echo "Be the first to add a review";
 }
  $conn->close();
  ?> 

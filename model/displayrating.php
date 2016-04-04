@@ -1,8 +1,5 @@
 <?php
-$localhost = "localhost";
-$username = "root";
-$password = "";
-$db = "recistaurant_DB";
+require '../database/db_connection_info.php';
 // Create connection
 if($_SERVER['REQUEST_METHOD']=='GET'){
 	$placeid = $_GET['placeid'];
@@ -28,7 +25,7 @@ if ($result->num_rows > 0) {
         
     }
 } else {
-    echo "";
+    echo " ";
 }
  $conn->close();
  ?> 

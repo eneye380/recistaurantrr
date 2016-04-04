@@ -15,7 +15,7 @@ function showRating(placeid) {
             if (xmlhttp.readyState === 4 && xmlhttp.status === 200) {
 			//alert("5");
 				if(xmlhttp.responseText!==0){
-					document.getElementById("rating").innerHTML = xmlhttp.responseText;
+					document.getElementById("rating").innerHTML = xmlhttp.responseText+"/ 5";
 				}
 				else{
 					document.getElementById("rating").innerHTML = "rating unavailable";

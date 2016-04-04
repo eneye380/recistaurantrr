@@ -13,10 +13,7 @@
 
         <?php
         session_start();
-        $localhost = "localhost";
-        $username = "root";
-        $password = "";
-        $db = "recistaurant_DB";
+        require '../database/db_connection_info.php';
         /* Create connection
           if($_SERVER['REQUEST_METHOD']=='GET'){
           $placeid = $_GET['placeid'];

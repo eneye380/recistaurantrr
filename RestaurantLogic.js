@@ -48,7 +48,7 @@ function showOnloadPosition(position) {
     initialize();
 }
 function showFindPosition(position) {
-    alert("m4");
+    //alert("m4");
     lat = position.coords.latitude;
     lon = position.coords.longitude;
     currentPosition = new google.maps.LatLng(lat, lon);
@@ -59,19 +59,19 @@ function showError(error) {
     //alert("m5");
     switch (error.code) {
         case error.PERMISSION_DENIED:
-            alert("m5a");
+            //alert("m5a");
             x.innerHTML = "User denied the request for Geolocation."
             break;
         case error.POSITION_UNAVAILABLE:
-            alert("m5b");
+            //alert("m5b");
             x.innerHTML = "Location information is unavailable."
             break;
         case error.TIMEOUT:
-            alert("m5c");
+            //alert("m5c");
             x.innerHTML = "The request to get user location timed out."
             break;
         case error.UNKNOWN_ERROR:
-            alert("m5d");
+            //alert("m5d");
             x.innerHTML = "An unknown error occurred."
             break;
     }
@@ -120,7 +120,7 @@ function trigger(key, min, max) {
 
     var request = {
         location: currentPosition,
-        radius: 2500,
+        radius: 5000,
         keyword: key,
         minPriceLevel: min,
         maxPriceLevel: max,

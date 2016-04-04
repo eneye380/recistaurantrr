@@ -65,7 +65,7 @@ and open the template in the editor.
                     </div>
                     <div class="radio col-lg-6">
                         <label class="radio-inline"><input id="curr" type= "radio" value = "a" name= "search_area" onclick="radiocheck()" >Nearby</label>
-                        <label class="radio-inline"><input id="spec" type = "radio" value = "b" name="search_area" onclick="radiocheck()" checked='true'>Other Location</label>
+                        <label class="radio-inline"><input id="spec" type = "radio" value = "b" name="search_area" onclick="radiocheck()" checked='true'>Other Locations</label>
                     </div>
                     <div class="col-lg-1">
                     </div>
@@ -118,7 +118,7 @@ and open the template in the editor.
                     <div id="review_panel_right" style="margin-right: 4px">
                         <div id="review_panel_right_heading" style="background-color: #122b40; color:mintcream "><h4 class="text-center">Users Restaurant Review</h4></div>
                         <div id="review_panel_right_restaurantName" style="color:maroon;font-weight: bold"><h5 class="text-center text-uppercase" id="restaurant_name" ></h5></div>
-                        <div id="review_panel_right_restaurantRating" style="color:red" class="text-center"><h6 id="restaurant_rating" ><span id="rating" class="stars"></span></h6></div>
+                        <div id="review_panel_right_restaurantRating" style="color: orangered" class="text-center"><h6 id="restaurant_rating" ><span id="rating" class=""></span></h6></div>
                         <div id="review_panel_right_reviewMessages" class="well"><?php
                             /*                             * for ($index = 0; $index < 1000; $index++) {
                               echo 'hello world';
@@ -145,7 +145,7 @@ and open the template in the editor.
                                         <td><textarea id="comment" name="review_message" style="float: left;" value="" rows="2px" cols="30px" placeholder="Enter review here"></textarea></td></tr>
                                     <tr>
                                         <td><select class="form-control input-sm" id="rating"name="rating" class="rating">
-                                                <option value="" selected>rating</option>
+                                                <option id="ratop" value="" selected>rating</option>
                                                 <option value="0.0">0.0</option>
                                                 <option value="1.0">1.0</option>
                                                 <option value="2.0">2.0</option>
@@ -165,12 +165,11 @@ and open the template in the editor.
         </div>
 
         <div class="footer container-fluid" style="background-color: black;">
+            
             <div class="container" style=' height: 215px'>
-
+                <p class='pull-right' style='color:aliceblue'><span>&copy;</span> PAS 2015</p>
             </div>
             <div class="container" style='margin-bottom: 25px'>
-                <p class='pull-right' style='color:aliceblue'><span>&copy;</span>2015, <!--em>eneye, pearl and stuart</em--></p>
-                <p style="white"><?=$_SESSION['count'];?> ONLINE</p>
             </div>
         </div>
     </body>

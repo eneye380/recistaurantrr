@@ -5,8 +5,8 @@
  */
 
 counter = 0;
-$.fn.stars = function() {
-    return $(this).each(function() {
+$.fn.stars = function () {
+    return $(this).each(function () {
         // Get the value
         var val = parseFloat($(this).html());
         // Make sure that the value is in 0 - 5 range, multiply to get width
@@ -20,8 +20,8 @@ $.fn.stars = function() {
 function clear() {
     onloadCurrentLocation();
     //loadInputAutocomplete();
-    
-    
+
+
     n = document.getElementsByName('location');
     n[0].value = '';
     document.getElementById('restaurant_name').innerHTML = "";
@@ -36,7 +36,7 @@ function clear() {
 }
 function radiocheck() {
     document.getElementById('msg12').innerHTML = '';
-    
+
     if (document.getElementById("curr").checked === true)
     {
         p = document.getElementsByName('location');
@@ -52,7 +52,9 @@ function radiocheck() {
 
 function search(form) {
     document.getElementById('msg12').innerHTML = '';
-
+    document.getElementById('restaurant_name').innerHTML = "";
+    document.getElementById("rating").innerHTML = "";
+    document.getElementById("review_panel_right_reviewMessages").innerHTML = "";
     meal = '';
     price = 0;
     area = '';
@@ -107,7 +109,7 @@ function search(form) {
         console.log(sch.toString());
         console.log('counter - ' + counter);
         console.log("******************************");
-        trigger(sch.getKeyword(),sch.getMin(),sch.getMax());
+        trigger(sch.getKeyword(), sch.getMin(), sch.getMax());
     } else {
         document.getElementById('msg12').innerHTML = failmsg;
     }
@@ -184,16 +186,14 @@ function validateLocation(data) {
     //alert("v3");
     if (data === '') {
         return "please type and select a location";
-    }
-    else if(/[^,-. a-zA-Z0-9]/.test(data)){
-     return " invalid characters";
-     }
-    else
+    } else if (/[^,-. a-zA-Z0-9]/.test(data)) {
+        return " invalid characters";
+    } else
         return '';
 }
 
 
 
-$(function() {
+$(function () {
     $('span.stars').stars();
 });

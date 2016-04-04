@@ -1,8 +1,5 @@
 <?php
-$servername = "localhost";
-$username = "root";
-$password = "";
-$dbname = "recistaurant_DB";
+require 'db_connection_info.php';
 
 // Create connection
 $conn = new mysqli($servername, $username, $password, $dbname);

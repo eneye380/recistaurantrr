@@ -87,7 +87,7 @@ function deleteComment(form) {
 function post(form) {
     //alert("p4");
     if (form.email.value === "" || form.review_message.value === "" || form.placeid.value === "" || form.name.value === "" || form.rating.value === "") {
-        alert("1");
+        //alert("1");
         console.log("email: " + form.email.value);
         console.log("review: " + form.review_messagevalue);
         console.log("placeid: " + form.placeid.value);
@@ -113,6 +113,10 @@ function post(form) {
             if (xmlhttp.readyState === 4 && xmlhttp.status === 200) {
                 //alert("5");
                 document.getElementById("hint").innerHTML = xmlhttp.responseText;
+                document.getElementById("name").value = "";
+                document.getElementById("comment").value = "";
+                document.getElementById("ratop").selected = true;
+                document.getElementById("email").value = "";
                 //
                 //alert("41")
             }
@@ -127,6 +131,8 @@ function post(form) {
         //alert("7")
         xmlhttp.send(params);
         //
+
+
         return false;
     }
 }
