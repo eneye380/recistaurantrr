@@ -3,6 +3,7 @@
 
 <?php
 require '../database/db_connection_info.php';
+
 $conn = new mysqli($localhost, $username, $password, $db);
 
 $users = array("Inyene" => "1412183",

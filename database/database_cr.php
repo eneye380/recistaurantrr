@@ -1,17 +1,15 @@
 <?php
-$servername = "localhost";
-$username = "root";
-$password = "";
+require 'db_connection_info.php';
 
 // Create connection
-$conn = new mysqli($servername, $username, $password);
+$conn = new mysqli($localhost, $username, $password);
  // Check connection
  if ($conn->connect_error) {
      die("Connection failed: " . $conn->connect_error);
 } 
 
 // Create database
- $sql = "CREATE DATABASE recistaurant_DB";
+ $sql = "CREATE DATABASE ".$db."";
 if ($conn->query($sql) === TRUE) {
     echo "Database created successfully";
 } else {

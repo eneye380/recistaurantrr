@@ -192,6 +192,7 @@ function passwordCheck(form) {
                 var x = String(xmlhttp.responseText);
                 x = x.replace(/\s+/g, '');
                 console.log(x === 'ok');
+                //alert(x);
                 if (x === 'ok') {
                     location.href = '/model/adminview.php';
                 } else if (x === 'notok') {
