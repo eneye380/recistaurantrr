@@ -26,7 +26,7 @@ and open the template in the editor.
 
             <div class='row' style='background-color:'>                
                 <div class='col-sm-4 col-xs-12' title="coming soon!!!">
-                    <a href='#' style='color:lightcoral; margin-top: 20px; font-size: medium; font-style: oblique; background-color: transparent' class='btn-primary btn-link pull-right'>Find Your Recipe's</a>
+                    <!--a href='#' style='color:lightcoral; margin-top: 20px; font-size: medium; font-style: oblique; background-color: transparent' class='btn-primary btn-link pull-right'>Find Your Recipe's</a-->
                     
                 </div>
                 <div class='col-sm-4 col-xs-12'>
